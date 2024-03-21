@@ -130,6 +130,8 @@ Collection of formatters. Currently supports the following ones.
 ### How to use `piiRedact` formatter
 `piiRedact` uses [`fast-redact`](https://www.npmjs.com/package/fast-redact) for redacting data. Kindly check the `fast-redact` documentation for more info.
 
+> ⚠️ Use `structuredClone` or deep copy to log data in the log, or the redactor will mutate the data object.
+
 
 Example code for using `piiRedact`.
 
@@ -166,7 +168,7 @@ const logger = require('./path/to/logger');
 
 function resetPassword(data) {
     // data = {emailId: 'user@example.com'}
-    logger.debug('user password reset', {data: data});
+    logger.debug('user password reset', {data: structuredClone(data) });
 
     // LOG: { "level": "debug", "message": "user password reset", "data": { "emailId": "[REDACTED]" }}
 
