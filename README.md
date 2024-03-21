@@ -34,7 +34,7 @@ const logger = winston.createLogger({
 
 winston.addColors(google.colors);  // Log Colors
 
-module.expoers = logger;
+module.exports = logger;
 
 ```
 

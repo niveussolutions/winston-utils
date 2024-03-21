@@ -11,7 +11,7 @@ const google = {
     },
     colors: {
         emerg: 'bold white blackBG',
-        alert: 'bold red yelloBG',
+        alert: 'bold red yellowBG',
         crit: 'bold white redBG',
         error: 'black redBG',
         warn: 'black magentaBG',
@@ -33,9 +33,9 @@ const rfc3164 = {
         debug: 7,
     },
     colors: {
-        emerg: 'bold white blackBG',
-        alert: 'bold red yelloBG',
-        crit: 'bold white redBG',
+        emerg: 'white blackBG',
+        alert: 'red yelloBG',
+        crit: 'white redBG',
         error: 'black redBG',
         warn: 'black magentaBG',
         notice: 'white blueBG',
